@@ -96,7 +96,7 @@ def probability_nonnegative(f: Callable[[Box2D], Interval], domain: Box2D, itera
     return Interval.wrap(lower_bound, upper_bound)
 
 def approximate_pi(iterations):
-    # We have `pi = 4 * Prob(f(u) >= 0 | u \in [0, 1] x [0, 1])`.
+    # We have `pi = 4 * Prob(f(u) >= 0 | u \in [0, 1] x [0, 1])`(when `u` distributed uniformally).
     # We approximate `pi` by approximating this quantity.
     def f(vector: Box2D):
         return Interval.singleton(1) - vector.x * vector.x - vector.y * vector.y
