@@ -3,7 +3,6 @@ from sys import float_info
 from queue import PriorityQueue
 from tqdm import tqdm
 from dataclasses import dataclass, field
-import matplotlib.pyplot as plt
 
 class Interval:
     def __init__(self, min: float, max: float):
